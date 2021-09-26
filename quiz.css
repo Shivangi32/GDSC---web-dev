@@ -1,0 +1,70 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    line-height: 4vw;
+    background-color: rgb(255 47 0);
+    font-size: 2vw;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 40vw;
+    border-radius: 1vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4.5vw;
+    box-shadow: 0 0 13x 5px;
+    background-color: rgb(255, 166, 0);
+}
+#options
+{
+    display: flex;
+    justify-content: space-around;
+    width: 20vw;
+    
+}
+
+.choice_btn
+{
+    padding: 1vw;
+    background-color: rgb(0, 255, 242);
+    border-radius: 1vw;
+    font-size: 2vw;
+    cursor: pointer;
+}
+.score{
+
+    display: flex;
+    justify-content: center;
+    background-color: rgb(30, 255, 0);
+    width: 10vw;
+    height: 5vw;
+    border-radius: 1vw;
+    font-size: 2vw;
+    padding-top: 1.5vw;
+
+}
+
+#controls
+{
+    padding: 2vw;
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+}
+.control_btn
+{
+    padding: 1vw;
+    background-color: rgb(43, 255, 0);
+    border-radius: 1vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
