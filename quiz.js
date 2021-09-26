@@ -6,8 +6,12 @@ var questions=[
     "The cd command changes directories.",
     "Spaces and commas are allowed in a variable name in C",
     "Only character or integer can be used in switch statement in C",
-    "If you don't close the tag for the anchor A, you are still able to access the link in the page."
+    "If you don't close the tag for the anchor A, you are still able to access the link in the page.",
+    "By default, properties in CSS are inherited from parent element to child element.-t",
+    "Padding can be negative.-f"
 ];
+
+var answers=[];
 
 var next=document.getElementById("next");
 var prev=document.getElementById("prev");
@@ -15,6 +19,7 @@ var submit=document.getElementById("submit");
 var True=document.getElementById("true");
 var False=document.getElementById("false");
 var question= document.getElementById("question");
+var user_score=document.getElementById("user_score");
 console.log(question);
 for(var i=0;i<questions.length;i++)
    question.textContent="Q"+i+"."+questions[i];
