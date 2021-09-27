@@ -52,7 +52,9 @@ body{
     padding-top: 1.5vw;
 
 }
-
+.colourchange{
+    color: blueviolet;
+}
 #controls
 {
     padding: 2vw;
