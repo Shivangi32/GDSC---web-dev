@@ -26,7 +26,7 @@ var counter=0;
 question.textContent="Q"+(counter+1)+"."+questions[0];
 
 function onSubmit(){
-
+  
 }
 
 True.addEventListener("click",True.classList.add("colourchange"));
