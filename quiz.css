@@ -4,15 +4,23 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+#line{
+    background-color: blue;
+    width: 94vw;
+    height: 0.5vw;
+    position: relative;
+    left:3vw;
+    border-radius: 1vw;
+    margin-top: 2vw;
+}
 body{
-    text-align: center;
-    display: flex;
-    justify-content: center;
     line-height: 4vw;
+    text-align: center;
     background-color: rgb(255 47 0);
     font-size: 2vw;
 }
 .container{
+    margin-left: 20vw;
     display: flex;
     flex-direction: column;
     width: 60vw;
@@ -20,13 +28,18 @@ body{
     border-radius: 1vw;
     align-items: center;
     justify-content: center;
-    margin-top: 4.5vw;
+    margin-top: 2.5vw;
     box-shadow: 0 0 13x 5px;
     background-color: rgb(255, 166, 0);
 }
+.control_btn :hover{
+   background-color: rgb(120, 47, 255);
+}
+
 .choice_btn,.control_btn{
     transition: 0.5S;
     transition-property: all;
+    
     transition-timing-function: ease-in;
 }
 #options
@@ -79,4 +92,20 @@ body{
 #result{
     display:none ;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#line{
+    animation-name: line;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+@keyframes line{
+    from {
+        width:94vw;
+    }
+    to{
+        width:0vw;
+    }
 }

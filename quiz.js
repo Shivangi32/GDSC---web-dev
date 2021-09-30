@@ -22,6 +22,7 @@ var result=document.getElementById("result");
 var False=document.getElementById("false");
 var question= document.getElementById("question");
 var user_score=document.getElementById("user_score");
+var line=document.getElementById("line");
 
 var score=0;
 var counter=0;
@@ -31,6 +32,7 @@ function reset(){
     True.classList.remove("colourchange");
     False.classList.remove("colourchange");
     result.style.display="none";
+    line.style.animation="line";
 }
 
 function restartQ(){
