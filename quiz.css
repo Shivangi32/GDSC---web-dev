@@ -24,6 +24,11 @@ body{
     box-shadow: 0 0 13x 5px;
     background-color: rgb(255, 166, 0);
 }
+.choice_btn,.control_btn{
+    transition: 0.5S;
+    transition-property: all;
+    transition-timing-function: ease-in;
+}
 #options
 {
     display: flex;
@@ -69,4 +74,9 @@ body{
     border-radius: 1vw;
     font-size: 1.5vw;
     cursor: pointer;
+}
+
+#result{
+    display:none ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

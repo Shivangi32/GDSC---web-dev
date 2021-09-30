@@ -6,38 +6,97 @@ var questions=[
     "The cd command changes directories.",
     "Spaces and commas are allowed in a variable name in C",
     "Only character or integer can be used in switch statement in C",
-    "If you don't close the tag for the anchor A, you are still able to access the link in the page.",
-    "By default, properties in CSS are inherited from parent element to child element.-t",
-    "Padding can be negative.-f"
+    "The \"content-type\" header indiactes the content in file is HTML when delivered on the network.",
+    "By default, properties in CSS are inherited from parent element to child element.",
+    "Padding can be negative."
 ];
 
-var answers=[];
+var answers=[0,1,1,0,1,0,1,1,1,0];
 
 var next=document.getElementById("next");
+var restart=document.getElementById("restart");
 var prev=document.getElementById("prev");
 var submit=document.getElementById("submit");
 var True=document.getElementById("true");
+var result=document.getElementById("result");
 var False=document.getElementById("false");
 var question= document.getElementById("question");
 var user_score=document.getElementById("user_score");
 
-console.log(question);
+var score=0;
 var counter=0;
 question.textContent="Q"+(counter+1)+"."+questions[0];
 
+function reset(){
+    True.classList.remove("colourchange");
+    False.classList.remove("colourchange");
+    result.style.display="none";
+}
+
+function restartQ(){
+    reset();
+    counter=0;
+    question.textContent="Q"+(counter+1)+"."+questions[0];
+    score=0;
+    user_score.textContent=score;
+
+
+}
 function onSubmit(){
+
+
   
 }
 
-True.addEventListener("click",True.classList.add("colourchange"));
-submit.addEventListener("click",onSubmit());
-next.addEventListener("click",function(){
-    True.addEventListener("click",True.classList.remove("colourchange"));
+
+restart.addEventListener("click",restartQ);
+
+True.addEventListener("click",()=>{
+    True.classList.add("colourchange");
+    False.classList.remove("colourchange");
+    result.style.display="block";
+    if(answers[counter]==1)
+    {
+        score++;
+        user_score.textContent=score;
+        result.style.color="green";
+        result.textContent="Correct Answer :)";
+    }
+    else{
+        result.style.color="red";
+        result.textContent="Wrong Answer :(";
+    }
+    setTimeout(nextQ,2000);
+});
+
+False.addEventListener("click",()=>{
+    False.classList.add("colourchange");
+    True.classList.remove("colourchange");
+    result.style.display="block";
+    if(answers[counter]==0)
+    {
+        score++;
+        user_score.textContent=score;
+        result.style.color="green";
+        result.textContent="Correct Answer :)";
+    }
+    else{
+        result.style.color="red";
+        result.textContent="Wrong Answer :(";
+    }
+    setTimeout(nextQ,2000);
+});
+submit.addEventListener("click",onSubmit);
+
+function nextQ(){
+
+    reset();
     if(counter<9)
     {
      counter++;
      question.textContent="Q"+(counter+1)+"."+questions[counter];
     }
     else
-    onSubmit();
-})
+     onSubmit();
+}
+next.addEventListener("click",nextQ);
