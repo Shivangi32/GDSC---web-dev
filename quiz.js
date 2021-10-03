@@ -12,7 +12,7 @@ var questions=[
 ];
 
 var answers=[0,1,1,0,1,0,1,1,1,0];
-
+var user_ans=[];
 var next=document.getElementById("next");
 var restart=document.getElementById("restart");
 var prev=document.getElementById("prev");
@@ -22,17 +22,24 @@ var result=document.getElementById("result");
 var False=document.getElementById("false");
 var question= document.getElementById("question");
 var user_score=document.getElementById("user_score");
-var line=document.getElementById("line");
+var timer=document.getElementsByClassName("timer")[0];
 
 var score=0;
 var counter=0;
+timer.classList.add("linep");
 question.textContent="Q"+(counter+1)+"."+questions[0];
+setTimeout(nextQ,10000);
+
+submit.addEventListener("click",onSubmit);
+next.addEventListener("click",nextQ);
+restart.addEventListener("click",restartQ);
 
 function reset(){
+    timer.classList.add("linep");
     True.classList.remove("colourchange");
     False.classList.remove("colourchange");
     result.style.display="none";
-    line.style.animation="line";
+
 }
 
 function restartQ(){
@@ -41,17 +48,8 @@ function restartQ(){
     question.textContent="Q"+(counter+1)+"."+questions[0];
     score=0;
     user_score.textContent=score;
-
-
-}
-function onSubmit(){
-
-
-  
 }
 
-
-restart.addEventListener("click",restartQ);
 
 True.addEventListener("click",()=>{
     True.classList.add("colourchange");
@@ -63,12 +61,13 @@ True.addEventListener("click",()=>{
         user_score.textContent=score;
         result.style.color="green";
         result.textContent="Correct Answer :)";
+        user_ans.push(1);
     }
     else{
         result.style.color="red";
         result.textContent="Wrong Answer :(";
+        user_ans.push(0);
     }
-    setTimeout(nextQ,2000);
 });
 
 False.addEventListener("click",()=>{
@@ -78,6 +77,7 @@ False.addEventListener("click",()=>{
     if(answers[counter]==0)
     {
         score++;
+        user_ans.push(0);
         user_score.textContent=score;
         result.style.color="green";
         result.textContent="Correct Answer :)";
@@ -85,20 +85,27 @@ False.addEventListener("click",()=>{
     else{
         result.style.color="red";
         result.textContent="Wrong Answer :(";
+        user_ans.push(1);
     }
-    setTimeout(nextQ,2000);
+    
 });
-submit.addEventListener("click",onSubmit);
 
 function nextQ(){
 
     reset();
+    
     if(counter<9)
     {
      counter++;
      question.textContent="Q"+(counter+1)+"."+questions[counter];
+     setTimeout(nextQ,10000);
     }
     else
      onSubmit();
+    
 }
-next.addEventListener("click",nextQ);
+if(True.addEventListener==true)
+  alert("clicked");
+function onSubmit(){
+
+}
