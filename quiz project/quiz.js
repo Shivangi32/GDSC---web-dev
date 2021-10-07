@@ -25,25 +25,27 @@ var user_score=document.getElementById("user_score");
 var timer=document.getElementsByClassName("timer")[0];
 
 var score=0;
-var counter=0;
-timer.classList.add("linep");
-question.textContent="Q"+(counter+1)+"."+questions[0];
-setTimeout(nextQ,10000);
+var counter=-1;
+var flag=0;
+window.onload=nextQ;
+
 
 submit.addEventListener("click",onSubmit);
 next.addEventListener("click",nextQ);
 restart.addEventListener("click",restartQ);
 
 function reset(){
-    timer.classList.add("linep");
+    timer.classList.remove("linep");
     True.classList.remove("colourchange");
+    void timer.offsetWidth;
+    timer.classList.add("linep");
     False.classList.remove("colourchange");
     result.style.display="none";
-
 }
 
 function restartQ(){
     reset();
+    curr=0;
     counter=0;
     question.textContent="Q"+(counter+1)+"."+questions[0];
     score=0;
@@ -68,6 +70,9 @@ True.addEventListener("click",()=>{
         result.textContent="Wrong Answer :(";
         user_ans.push(0);
     }
+    flag=1;
+    setTimeout(nextQ,2000);
+
 });
 
 False.addEventListener("click",()=>{
@@ -87,6 +92,8 @@ False.addEventListener("click",()=>{
         result.textContent="Wrong Answer :(";
         user_ans.push(1);
     }
+    flag=1;
+    setTimeout(nextQ,2000);
     
 });
 
@@ -98,14 +105,27 @@ function nextQ(){
     {
      counter++;
      question.textContent="Q"+(counter+1)+"."+questions[counter];
-     setTimeout(nextQ,10000);
+     setTimeout(check,7000);
+     console.log(curr);
+     console.log(counter);
     }
     else
      onSubmit();
     
 }
-if(True.addEventListener==true)
-  alert("clicked");
+
+function check()
+{
+    if(flag==0)
+    {
+        nextQ();
+    }
+    else
+      flag=0;
+}
+
 function onSubmit(){
+    
+      
 
 }

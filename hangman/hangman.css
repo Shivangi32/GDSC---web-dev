@@ -1,0 +1,77 @@
+body{
+    background-color: rgba(160, 226, 7, 0.897);
+}
+h1{
+    text-align: center;
+    font-size: 3vw;
+    background-color: steelblue;
+    margin: 0;
+    padding: 2vw;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Lucida Handwriting";
+}
+#stripe{
+    background-color: rgb(98, 230, 22);
+    height: 2.3vw;
+    text-align: center;
+}
+#word{
+    background-color: #00ff4c;
+    color: white;
+    font-size: xx-large;
+    width: fit-content;
+    padding: 2vw;
+    letter-spacing: 1vw;
+}
+
+#space{
+    display: inline-block;
+    width: 7vw;
+}
+.selected{
+    background-color: blueviolet;
+    color: white;
+}
+#stripe button{
+    color: rgb(12, 123, 219);
+    border: none;
+    font-size: 1.5vw;
+    background: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    height: 100%;
+    cursor: pointer;
+    padding: 0.3vw;
+    transition: 1s;
+}
+
+#strip button:hover{
+    background-color: blueviolet;
+    color: white;
+}
+#alphabets
+{
+    background-color: yellowgreen;
+    height: 15vw;
+    text-align: center;
+    padding: 3vw;
+    border-radius: 1vw;
+    width: 53vw;
+}
+
+.btn{
+
+    font-size: 1.6vw;
+    height: 4vw;
+    width: 4vw;
+    border-radius: 1vw;
+    cursor: pointer;
+    box-shadow: 0 0 0.4vw black;
+    margin:0.5vw;
+
+}
+
+.btn:hover{
+    background-color: yellowgreen;
+}

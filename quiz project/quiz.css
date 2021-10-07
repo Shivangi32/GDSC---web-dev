@@ -129,8 +129,8 @@ body{
 
 .linep{
     animation-name: line;
-    animation-duration: 10s;
-    animation-iteration-count:infinite;
+    animation-duration: 7s;
+    animation-iteration-count:1;
     animation-timing-function: ease;
 }
 
