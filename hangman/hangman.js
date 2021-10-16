@@ -39,7 +39,6 @@ for(var i=0;i<26;i++)
 
 function btnclick(e){
 
-    console.log(e);
     e.target.classList.add("selected");
     var ch=e.target.innerHTML;
     if(curr_word.indexOf(ch)==-1)
@@ -49,7 +48,6 @@ function btnclick(e){
     }
     else
     {
-      console.log(ch);
       for(var j=0;j<curr_word.length;j++)
       {
           if(ch==curr_word[j])
