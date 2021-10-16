@@ -1,61 +1,56 @@
 body{
-    background-color: rgba(160, 226, 7, 0.897);
+    background-color: rgb(233 15 15 / 63%);
+    background-image: url("background.jfif");
+    text-align: center;
 }
 h1{
     text-align: center;
-    font-size: 3vw;
-    background-color: steelblue;
+    font-size: 2vw;
+    background-color: #4fb446;
     margin: 0;
     padding: 2vw;
     color: white;
-    text-transform: uppercase;
-    font-family: "Lucida Handwriting";
-}
-#stripe{
-    background-color: rgb(98, 230, 22);
-    height: 2.3vw;
-    text-align: center;
+    width: fit-content;
+    border-radius: 1.5vw;
+    position: relative;
+    margin: auto;
+    margin-bottom: 1vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #word{
-    background-color: #00ff4c;
+    background-color: #ff006a;
     color: white;
     font-size: xx-large;
+    border-radius: 1vw;
     width: fit-content;
     padding: 2vw;
     letter-spacing: 1vw;
+    margin: auto;
+    margin-bottom: 1vw;
 }
 
-#space{
-    display: inline-block;
-    width: 7vw;
-}
 .selected{
-    background-color: blueviolet;
-    color: white;
-}
-#stripe button{
-    color: rgb(12, 123, 219);
-    border: none;
-    font-size: 1.5vw;
-    background: none;
-    text-transform: uppercase;
-    font-weight: 600;
-    height: 100%;
-    cursor: pointer;
-    padding: 0.3vw;
-    transition: 1s;
+    background-color:rgb(192 197 184) ;
 }
 
-#strip button:hover{
-    background-color: blueviolet;
-    color: white;
+#life{
+    margin: 1vw;
 }
+.cell
+{
+    border-radius: 1vw;
+    width: 6vw;
+    background-color: orange;
+    height: 1.5vw;
+}
+
 #alphabets
 {
     background-color: yellowgreen;
     height: 15vw;
     text-align: center;
     padding: 3vw;
+    margin: auto;
     border-radius: 1vw;
     width: 53vw;
 }
@@ -67,7 +62,6 @@ h1{
     width: 4vw;
     border-radius: 1vw;
     cursor: pointer;
-    box-shadow: 0 0 0.4vw black;
     margin:0.5vw;
 
 }
