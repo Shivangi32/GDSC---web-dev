@@ -11,7 +11,7 @@ var riddles=["What can you break, even if you never pick it up or touch it?",
             ];
 
 var letters=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-
+window.onload=reset;
 var lives=5;
 var idx=Math.floor(Math.random() * words.length);
 var curr_word = words[idx];
@@ -20,12 +20,25 @@ var question=document.getElementById("question");
 var answerArray = [];
 var word=document.getElementById("word");
 var cell=document.getElementsByClassName("cell");
-question.textContent=riddle;
+var new_word=document.getElementById("new_word");
 
-for (var i = 0; i < curr_word.length; i++) {
- answerArray[i] = "_";
- }
-word.textContent=answerArray;
+function reset(){
+  lives=5;
+  idx=Math.floor(Math.random() * words.length);
+  curr_word = words[idx];
+  riddle= riddles[idx];
+  question.textContent=riddle;
+  for (var i = 0; i < curr_word.length; i++) {
+    answerArray[i] = "_";
+    }
+   word.textContent=answerArray;
+  for(i=0;i<lives;i++)
+    cell[i].style.visibility="visible";
+
+}
+
+new_word.addEventListener("click",reset);
+
 
 var alphabets=document.getElementById("alphabets");
 for(var i=0;i<26;i++)

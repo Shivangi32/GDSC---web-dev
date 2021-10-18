@@ -17,6 +17,19 @@ h1{
     margin-bottom: 1vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+#new_word{
+  position: absolute;
+  right:5vw;
+  top: 10vw;
+  font-size: medium;
+  padding: 0.8vw;
+  border-radius: 1vw;
+  width: 8vw;
+  background-color: #ff9100;
+  font-weight: bold;
+  cursor: pointer;
+}
 #word{
     background-color: #ff006a;
     color: white;
