@@ -61,7 +61,7 @@ function reset(){
 new_word.addEventListener("click",reset);
 
 function btnclick(e){
-    if(e.target.classList.contains("selected"))
+    if(e.target.classList.contains("selected") || lives===0)
     {
       return;
     }
