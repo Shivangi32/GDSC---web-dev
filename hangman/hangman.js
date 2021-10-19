@@ -24,6 +24,7 @@ var cell=document.getElementsByClassName("cell");
 var new_word=document.getElementById("new_word");
 var warning=document.getElementById("warning");
 var alphabets=document.getElementById("alphabets");
+var count=0;
 
 for(var i=0;i<26;i++)
 {
@@ -41,6 +42,7 @@ function reset(){
   idx=Math.floor(Math.random() * words.length);
   curr_word = words[idx];
   riddle= riddles[idx];
+  count=0;
   question.textContent=riddle;
   answerArray=[];
   
@@ -61,7 +63,7 @@ function reset(){
 new_word.addEventListener("click",reset);
 
 function btnclick(e){
-    if(e.target.classList.contains("selected") || lives===0)
+    if(e.target.classList.contains("selected") || lives===0 || count==curr_word.length)
     {
       return;
     }
@@ -79,6 +81,7 @@ function btnclick(e){
           if(ch==curr_word[j])
           {
               answerArray[j]=ch;
+              count++;
           }
       }
       word.textContent=answerArray;
@@ -89,5 +92,12 @@ function btnclick(e){
     }
     else{
       warning.textContent="You have "+lives+" lives";
+    }
+
+    if(count==curr_word.length)
+    {
+      warning.textContent="You Won :)";
+      warning.style.color="green";
+      warning.style.backgroundColor="yellow";
     }
 }

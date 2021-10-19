@@ -13,8 +13,9 @@ h1{
     width: fit-content;
     border-radius: 1.5vw;
     position: relative;
-    margin: auto;
-    margin-bottom: 1vw;
+    margin:auto;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -43,7 +44,8 @@ h1{
 }
 
 .selected{
-    background-color:rgb(192 197 184) ;
+    background-color:yellowgreen ;
+    border: none;
 }
 
 #life{
@@ -81,13 +83,17 @@ h1{
 
 .btn:hover{
     background-color: yellowgreen;
+
 }
 
 #warning{
     font-family: cursive;
-    padding: 1vw;
+    padding: 0.5vw;
     display: inline-block;
     color: yellow;
-    font-size: 2.5vw;
+    font-size: 2.2vw;
     font-weight: bold;
+    border-radius: 1vw;
+    margin: auto;
+    margin-top: 1vw;
 }
