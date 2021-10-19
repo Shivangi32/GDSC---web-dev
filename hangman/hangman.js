@@ -1,4 +1,4 @@
-var words=["promise","dictionary","queue","light","money","Darkness","mushroom","breath"];
+var words=["promise","dictionary","queue","light","money","Darkness","mushroom","stamp","post office","silence","breath"];
 
 var riddles=["What can you break, even if you never pick it up or touch it?",
             "Where does today come before yesterday?",
@@ -7,6 +7,9 @@ var riddles=["What can you break, even if you never pick it up or touch it?",
             "People make me, save me, change me, raise me. What am I?",
             "The more there is, the less you see. What am I?",
             "What do you call a room with no windows?",
+            "What can travel around the world while staying in a corner",
+            "What two words, added together, contain the most letters?",
+            "What disappears as soon as you say its name? ",
             "I am light as a feather, but not even the strongest girl can hold me for more than 5 minutes. What am I?"
             ];
 
@@ -99,5 +102,6 @@ function btnclick(e){
       warning.textContent="You Won :)";
       warning.style.color="green";
       warning.style.backgroundColor="yellow";
+      warning.style.width="15vw";
     }
 }
