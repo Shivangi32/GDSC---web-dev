@@ -1,4 +1,4 @@
-var words=["promise","dictionary","queue","light","money","Darkness","mushroom","stamp","postoffice","silence","breath"];
+var words=["promise","dictionary","queue","light","money","darkness","mushroom","stamp","postoffice","silence","breath"];
 
 var riddles=["What can you break, even if you never pick it up or touch it?",
             "Where does today come before yesterday?",
